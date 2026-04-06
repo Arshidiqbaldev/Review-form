@@ -81,7 +81,7 @@ textarea {
   color: var(--white-2);
   padding: 0.8rem;
   font-size: 0.875rem;
-  border: var(--border);
+  border: 1px solid transparent;
   border-radius: 32px;
   outline: none;
   font-family: inherit;
@@ -212,7 +212,7 @@ textarea {
 
   .formDiv {
     width: 30%;
-      min-height: 50vh;
+      min-height: 70vh;
   }
 
 
