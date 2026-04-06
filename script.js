@@ -1,33 +1,73 @@
 
 
+const clientReviews = [
+    { clientName: "Carly Digital", clientReview: "“Great experience working with Saeed and very good website design. Will also quickly adjust anything you ask for and English fluency is good too. Thanks again Saeed!”", clientRole: "Web Manager, cameronpink.com" },
+    { clientName: "Andre", clientReview: "“Saeed worked very fast and he did exactly what I needed. When I asked for modification he was quick to help and did exactly as I asked, good experience working and I will be back for more!”", clientRole: "CEO, dnbacademy.net" },
+
+]
 
 
-const studentsInfo = [
-
-    { studentName: 'arshid', age: 20, grade: 'A', marks: 100, city: 'swabi' },
-    { studentName: 'ahmed', age: 18, grade: 'B', marks: 90, city: 'topi' },
-    { studentName: 'zohaib', age: 16, grade: 'C', marks: 80, city: 'janda' },
-    { studentName: 'ali', age: 14, grade: 'A', marks: 70, city: 'boqo' },
-    { studentName: 'sohail', age: 20, grade: 'A', marks: 100, city: 'swabi' },
-    { studentName: 'sohail', age: 20, grade: 'A', marks: 100, city: 'swabi' },
-
-];
+function drawReviews() {
+    const reviewGrid = document.getElementById("reviewGrid");
 
 
-const gridInfo = document.getElementById('studentInfo');
+    reviewGrid.innerHTML = " ";
+
+    if (clientReviews.length === 0) {
+        reviewGrid.innerHTML = `<p class="role"> No review found`;
+        return;
+    }
+
+    clientReviews.forEach(function (clientReview) {
+        const reviewCard = document.createElement("div");
+        reviewCard.classList.add("review-card");
+        reviewCard.innerHTML = `
+                    <span class="client-name">${clientReview.clientName}</span>
+                    <p class="client-review">${clientReview.clientReview}</p>
+                    <span class="client-role">${clientReview.clientRole} </span>
+               `;
+        reviewGrid.appendChild(reviewCard);
+
+    });
+
+}
 
 
-studentsInfo.forEach(function (studentInfor) {
-    const passStudent = studentInfor.marks >= 80;
+function addReview() {
+
+    const clientName = document.getElementById("clientName").value.trim();
+    const clientReview = document.getElementById("clientReview").value.trim();
+    const clientRole = document.getElementById("clientRole").value.trim();
+
+    if (!clientName || !clientRole || !clientReview) {
+        document.getElementById("error").style.display = "block";
+        return;
+
+    }
+
+    document.getElementById("error").style.display = "none";
+    clientReviews.push({
+        clientName: clientName,
+        clientReview: clientReview,
+        clientRole: clientRole,
+    });
 
 
-    gridInfo.innerHTML += `
-     <div class="card">
-    <h3 class="studentname">${studentInfor.studentName}</h3>
-    <h3 class="studentage"> ${studentInfor.age}</h3>
-    <p class="studentmarks">${studentInfor.marks}</p>
-    <p class="studentgrade">${studentInfor.grade}</p>
-    <p class="studentplace">${studentInfor.city}</p>
-    <p class="studentresult">${passStudent ? 'passed ✓ ' : 'fail ✗'}</p>
- </div>`;
-})
+
+    document.getElementById("clientName").value = '';
+
+    document.getElementById("clientReview").value = '';
+
+    document.getElementById("clientRole").value = '';
+
+    drawReviews();
+
+
+
+}
+
+
+
+
+
+drawReviews();
