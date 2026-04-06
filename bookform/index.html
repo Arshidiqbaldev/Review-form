@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews Site</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="content">
+        <div class="formDiv">
+            <h1 class="heading">Write a Review</h1>
+            <input type="text" id="clientName" placeholder="Name" />
+            <textarea id="clientReview" placeholder="Write Review"></textarea>
+            <input type="text" id="clientRole" placeholder="Role" />
+            <button id="submitReview" onclick="addReview()">Submit</button>
+            <p id="error">Please fill in all fields!</p>
+        </div>
+
+
+        <div class="reviewSec">
+            <h2 class="heading"> Client Reviews</h2>
+
+            <div id="reviewGrid">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
