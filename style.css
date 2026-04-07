@@ -113,5 +113,6 @@ body {
   padding: 0.8rem 2rem;
   corner-shape:var(--shape) ;
   cursor: pointer;
+  text-transform: capitalize;
 
 }
