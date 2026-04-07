@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/OffBit-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/OffBit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --brand: #f60900;
+  --white: #fff;
+  --white-2: #e0e0e0;
+  --white-3: #888888;
+  --black: #000000;
+  --black-2: #1c1a1a;
+  --black-3: #121212;
+  --border: 1px solid #1e1e1e;
+  --shape: squircle;
+  --myFont: "myFont", sans-serif;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  max-width: 400px;
+  min-height: 100vh;
+}
+
+#parent {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+    transition: all 0.4s ease;
+  
+}
+
+
+
+
+.child {
+  display: flex;
+  width: 10%;
+  background: var(--brand);
+  height: 90%;
+  transition: all 0.4s ease;
+  border-radius: 42px;
+  corner-shape: var(--shape);
+  cursor: pointer;
+}
+
+.child:nth-child(2){
+  flex-grow: 1;
+  height: 100%;
+}
+/* child 1 */
+
+.parent-child-1 .child:nth-child(1) {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.parent-child-1 .child:nth-child(2) {
+  flex-grow: 0;
+  height: 95%;
+  flex-shrink: 1;
+}
+
+.parent-child-1 .child:nth-child(3) {
+  flex-grow: 0;
+  height: 90%;
+  flex-shrink: 1;
+}
+
+/* child 2 */
+
+.parent-child-2 .child:nth-child(1) {
+  flex-grow: 0;
+  height: 90%;
+  flex-shrink: 1;
+}
+
+.parent-child-2 .child:nth-child(2) {
+  flex-grow: 1;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.parent-child-2 .child:nth-child(3) {
+  flex-grow: 0;
+  height: 90%;
+  flex-shrink: 1;
+}
+
+/* child 3 */
+
+.parent-child-3 .child:nth-child(1) {
+  flex-grow: 0;
+  height: 90%;
+  flex-shrink: 1;
+}
+
+.parent-child-3 .child:nth-child(2) {
+  flex-grow: 0;
+  height: 95%;
+  flex-shrink: 1;
+}
+
+.parent-child-3 .child:nth-child(3) {
+  flex-grow: 1;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+
+
+
+/* div-2 */
+
+
+#parentTwo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+    transition: all 0.4s ease;
+  
+}
+
+
+
+
+.child-2 {
+  display: flex;
+  width: 90%;
+  background: var(--brand);
+  height: 10%;
+  transition: all 0.4s ease;
+  border-radius: 42px;
+  corner-shape: var(--shape);
+  cursor: pointer;
+}
+
+.child-2:nth-child(2){
+  flex-grow: 1;
+  width: 100%;
+}
+/* child 1 */
+
+.parent-2-child-1 .child-2:nth-child(1) {
+  flex-grow: 1;
+  width: 100%;
+  
+}
+
+.parent-2-child-1 .child-2:nth-child(2) {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 95%;
+}
+
+.parent-2-child-1 .child-2:nth-child(3) {
+  flex-grow: 0;
+  width: 90%;
+  flex-shrink: 1;
+}
+
+/* child 2 */
+
+.parent-2-child-2 .child-2:nth-child(1) {
+  flex-grow: 0;
+  width: 90%;
+  flex-shrink: 1;
+}
+
+.parent-2-child-2 .child-2:nth-child(2) {
+  flex-grow: 1;
+ width: 100%;
+  flex-shrink: 0;
+}
+
+.parent-2-child-2 .child-2:nth-child(3) {
+  flex-grow: 0;
+  width: 90%;
+  flex-shrink: 1;
+}
+
+/* child 3 */
+
+.parent-2-child-3 .child-2:nth-child(1) {
+  flex-grow: 0;
+  width: 90%;
+  flex-shrink: 1;
+}
+
+.parent-2-child-3 .child-2:nth-child(2) {
+  flex-grow: 0;
+  width: 95%;
+  flex-shrink: 1;
+}
+
+.parent-2-child-3 .child-2:nth-child(3) {
+  flex-grow: 1;
+  width: 100%;
+  flex-shrink: 0;
+}

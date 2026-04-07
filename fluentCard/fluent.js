@@ -1,0 +1,29 @@
+
+
+
+const parent = document.getElementById("parent");
+const children = document.querySelectorAll("#parent .child");
+
+children.forEach((child, index) => {
+    child.addEventListener("click", () => {
+        parent.className = ""; // clear old classes
+        parent.classList.add(`parent-child-${index + 1}`);
+    });
+});
+
+
+
+
+
+const parentTwo = document.getElementById("parentTwo");
+const childrenTwo = document.querySelectorAll("#parentTwo .child-2");
+
+childrenTwo.forEach((child, index) => {
+    child.addEventListener("click", () => {
+        parentTwo.className = ""; // clear old classes
+        parentTwo.classList.add(`parent-2-child-${index + 1}`);
+    });
+});
+
+
+

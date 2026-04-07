@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/OffBit-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/OffBit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --brand: #f60900;
+  --white: #fff;
+  --white-2: #e0e0e0;
+  --white-3: #888888;
+  --black: #000000;
+  --black-2: #1c1a1a;
+  --black-3: #121212;
+  --border: 1px solid #1e1e1e;
+  --shape: squircle;
+  --myFont: "myFont", sans-serif;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 90%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.formDiv {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.heading {
+  font-family: myFont;
+  color: var(--white);
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+input,
+textarea {
+  background: var(--black-3);
+  color: var(--white-2);
+  padding: 0.8rem;
+  font-size: 0.875rem;
+  border: 1px solid transparent;
+  border-radius: 32px;
+  outline: none;
+  font-family: inherit;
+  width: 100%;
+  corner-shape: var(--shape);
+}
+
+input:focus {
+  border-color: #353434;
+}
+
+::placeholder {
+  color: var(--white-3);
+}
+
+#clientName,
+#clientRole {
+  width: 80%;
+}
+
+textarea {
+  resize: none;
+  min-height: 250px;
+  width: 100%;
+  background: var(--black-2);
+}
+
+#submitReview {
+  width: 60%;
+  padding: 0.8rem;
+  background: var(--brand);
+  color: black;
+  border: var(--border);
+  border-radius: 32px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  corner-shape: var(--shape);
+  cursor: pointer;
+}
+
+#error {
+  font-size: 0.8rem;
+  color: var(--brand);
+  display: none;
+}
+
+.reviewSec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#reviewGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 10px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+  background: var(--black-3);
+  border-radius: 32px;
+  corner-shape: var(--shape);
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.review-card:hover {
+  background: var(--black-2);
+}
+
+.client-name {
+  font-family: var(--myFont);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--brand);
+  text-transform: capitalize;
+}
+
+.client-review {
+  font-size: 1.125rem;
+  color: var(--white-2);
+  flex-grow: 1;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.client-role {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--white-3);
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .content {
+    width: 90%;
+  }
+
+  .formDiv {
+    width: 100%;
+  }
+
+  .reviewSec {
+    width: 100%;
+  }
+
+  #reviewGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+
+
+  .content {
+    width: 100%;
+  }
+
+  .formDiv {
+    width: 30%;
+      min-height: 70vh;
+  }
+
+
+
+  .reviewSec {
+    width: 30%;
+  }
+
+  #reviewGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 10px;
+  }
+}
