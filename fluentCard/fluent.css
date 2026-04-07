@@ -48,10 +48,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 95%;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem;
+  padding: 8px;
   max-width: 400px;
   min-height: 100vh;
 }
@@ -73,7 +73,7 @@ body {
 
 .child {
   display: flex;
-  width: 14%;
+  width: 50px;
   background: var(--brand);
   height: 90%;
   transition: all 0.4s ease;
@@ -157,7 +157,7 @@ body {
   gap: 8px;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  height: 400px;
   width: 100%;
     transition: all 0.4s ease;
   
@@ -170,7 +170,7 @@ body {
   display: flex;
   width: 90%;
   background: var(--brand);
-  height: 10%;
+  height: 50px;
   transition: all 0.4s ease;
   border-radius: 42px;
   corner-shape: var(--shape);
