@@ -168,7 +168,7 @@ body {
 
 .child-2 {
   display: flex;
-  width: 100%;
+  width: 90%;
   background: var(--brand);
   height: 10%;
   transition: all 0.4s ease;
