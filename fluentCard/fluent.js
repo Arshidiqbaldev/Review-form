@@ -3,6 +3,7 @@
 
 const parent = document.getElementById("parent");
 const children = document.querySelectorAll("#parent .child");
+const myAudio = new Audio ("imgs/bubble-pop.mp3");
 
 
 //for parent 1
@@ -11,6 +12,11 @@ children.forEach((child, index) => {
     child.addEventListener("click", () => {
         parent.className = ""; 
         parent.classList.add(`parent-child-${index + 1}`);
+        myAudio.currentTime = 0;
+        myAudio.duration= 0.4;
+        myAudio.volume = 0.1;
+       
+        myAudio.play();
     });
 });
 
@@ -25,6 +31,9 @@ childrenTwo.forEach((child, index) => {
     child.addEventListener("click", () => {
         parentTwo.className = ""; 
         parentTwo.classList.add(`parent-2-child-${index + 1}`);
+        myAudio.currentTime = 0;
+        myAudio.play();
+
     });
 });
 
@@ -42,7 +51,6 @@ rows.addEventListener("click", () => {
     parentTwo.style.display = "none";
     parent.style.display = "flex"
     document.getElementById("rows").addEventListener("click",()=>{
-
     rows.classList.add("switch-icon-2");
     columns.classList.remove("switch-icon-2");
 
