@@ -146,7 +146,7 @@ textarea {
 .review-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
   padding: 1rem;
   background: var(--black-3);
   border-radius: 32px;
@@ -168,7 +168,7 @@ textarea {
 }
 
 .client-review {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--white-2);
   flex-grow: 1;
   line-height: 150%;
