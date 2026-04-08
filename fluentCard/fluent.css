@@ -250,6 +250,11 @@ body {
   transition: all 0.8s ease;
 }
 
+.switch-icon:hover{
+  background: #370300;
+
+}
+
 .switch-icon-2{
   background: #370300;
 
