@@ -4,23 +4,26 @@
 const parent = document.getElementById("parent");
 const children = document.querySelectorAll("#parent .child");
 
+
+//for parent 1
+
 children.forEach((child, index) => {
     child.addEventListener("click", () => {
-        parent.className = ""; // clear old classes
+        parent.className = ""; 
         parent.classList.add(`parent-child-${index + 1}`);
     });
 });
 
 
 
-
+//for parent2
 
 const parentTwo = document.getElementById("parentTwo");
 const childrenTwo = document.querySelectorAll("#parentTwo .child-2");
 
 childrenTwo.forEach((child, index) => {
     child.addEventListener("click", () => {
-        parentTwo.className = ""; // clear old classes
+        parentTwo.className = ""; 
         parentTwo.classList.add(`parent-2-child-${index + 1}`);
     });
 });
@@ -30,6 +33,9 @@ childrenTwo.forEach((child, index) => {
 const columns = document.getElementById("columns");
 const rows = document.getElementById("rows");
 
+
+
+//for rows
 
 rows.addEventListener("click", () => {
 
@@ -46,6 +52,7 @@ rows.addEventListener("click", () => {
 });
 
 
+//for columns
 
 columns.addEventListener("click", () => {
 
