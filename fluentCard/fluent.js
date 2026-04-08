@@ -3,19 +3,20 @@
 
 const parent = document.getElementById("parent");
 const children = document.querySelectorAll("#parent .child");
-const myAudio = new Audio ("imgs/bubble-pop.mp3");
+const myAudio = new Audio("imgs/bubble-pop.mp3");
+const myAudio2 = new Audio("imgs/mouse-click.mp3");
+
 
 
 //for parent 1
 
 children.forEach((child, index) => {
     child.addEventListener("click", () => {
-        parent.className = ""; 
+        parent.className = "";
         parent.classList.add(`parent-child-${index + 1}`);
         myAudio.currentTime = 0;
-        myAudio.duration= 0.4;
+        myAudio.duration = 0.4;
         myAudio.volume = 0.1;
-       
         myAudio.play();
     });
 });
@@ -29,9 +30,11 @@ const childrenTwo = document.querySelectorAll("#parentTwo .child-2");
 
 childrenTwo.forEach((child, index) => {
     child.addEventListener("click", () => {
-        parentTwo.className = ""; 
+        parentTwo.className = "";
         parentTwo.classList.add(`parent-2-child-${index + 1}`);
         myAudio.currentTime = 0;
+        myAudio.duration = 0.4;
+        myAudio.volume = 0.1;
         myAudio.play();
 
     });
@@ -50,9 +53,13 @@ rows.addEventListener("click", () => {
 
     parentTwo.style.display = "none";
     parent.style.display = "flex"
-    document.getElementById("rows").addEventListener("click",()=>{
-    rows.classList.add("switch-icon-2");
-    columns.classList.remove("switch-icon-2");
+    document.getElementById("rows").addEventListener("click", () => {
+        rows.classList.add("switch-icon-2");
+        columns.classList.remove("switch-icon-2");
+        myAudio2.currentTime = 0;
+        myAudio2.duration = 0.4;
+        myAudio2.volume = 0.1;
+        myAudio2.play();
 
 
     })
@@ -68,6 +75,10 @@ columns.addEventListener("click", () => {
     parentTwo.style.display = "flex";
     rows.classList.remove("switch-icon-2");
     columns.classList.add("switch-icon-2");
+    myAudio2.currentTime = 0;
+    myAudio2.duration = 0.4;
+    myAudio2.volume = 0.1;
+    myAudio2.play();
 })
 
 
