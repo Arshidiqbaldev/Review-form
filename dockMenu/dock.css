@@ -28,7 +28,7 @@
   --white-3: #888888;
   --black: #000000;
   --black-2: #1c1a1a;
-  --black-3: #323232;
+  --black-3: #2c2c2c;
   --border: 1px solid #1e1e1e;
   --shape: squircle;
   --myFont: "myFont", sans-serif;
@@ -81,8 +81,8 @@ body {
 
 .social-icon {
   background: var(--black-2);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   padding: 10px;
   border-radius: 42px;
   corner-shape: var(--shape);
@@ -97,40 +97,40 @@ body {
 /* for child 1 */
 
 .parent-child-1 .social-icon:nth-child(1){
-    width: 80px;
-    height: 80px;
-} 
-
-.parent-child-1 .social-icon:nth-child(2){
     width: 70px;
     height: 70px;
 } 
 
-.parent-child-1 .social-icon:nth-child(3){
+.parent-child-1 .social-icon:nth-child(2){
     width: 60px;
     height: 60px;
+} 
+
+.parent-child-1 .social-icon:nth-child(3){
+    width: 50px;
+    height: 50px;
 } 
 
 /* for child 2 */
 
 .parent-child-2 .social-icon:nth-child(1){
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 } 
 
 .parent-child-2 .social-icon:nth-child(2){
-    width: 80px;
-    height: 80px;
-} 
-
-.parent-child-2 .social-icon:nth-child(3){
     width: 70px;
     height: 70px;
 } 
 
-.parent-child-2 .social-icon:nth-child(4){
+.parent-child-2 .social-icon:nth-child(3){
     width: 60px;
     height: 60px;
+} 
+
+.parent-child-2 .social-icon:nth-child(4){
+    width: 50px;
+    height: 50px;
 } 
 
 
@@ -138,49 +138,46 @@ body {
 /* for child 3 */
 
 .parent-child-3 .social-icon:nth-child(1){
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 } 
 
 .parent-child-3 .social-icon:nth-child(2){
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 } 
 
 .parent-child-3 .social-icon:nth-child(3){
-    width: 80px;
-    height: 80px;
-} 
-.parent-child-3 .social-icon:nth-child(4){
     width: 70px;
     height: 70px;
 } 
-
-.parent-child-3 .social-icon:nth-child(5){
+.parent-child-3 .social-icon:nth-child(4){
     width: 60px;
     height: 60px;
+} 
+
+.parent-child-3 .social-icon:nth-child(5){
+    width: 50px;
+    height: 50px;
 } 
 
 
 /* for child 4 */
 
-.parent-child-4 .social-icon:nth-child(1){
+
+
+.parent-child-4 .social-icon:nth-child(2){
     width: 50px;
     height: 50px;
 } 
 
-.parent-child-4 .social-icon:nth-child(2){
+.parent-child-4 .social-icon:nth-child(3){
     width: 60px;
     height: 60px;
 } 
-
-.parent-child-4 .social-icon:nth-child(3){
+.parent-child-4 .social-icon:nth-child(4){
     width: 70px;
     height: 70px;
-} 
-.parent-child-4 .social-icon:nth-child(4){
-    width: 80px;
-    height: 80px;
 } 
 
 .parent-child-4 .social-icon:nth-child(5){
@@ -192,27 +189,21 @@ body {
 
 /* for child 4 */
 
-.parent-child-5 .social-icon:nth-child(1){
-    width: 50px;
-    height: 50px;
-} 
 
-.parent-child-5 .social-icon:nth-child(2){
-    width: 50px;
-    height: 50px;
-} 
+
+
 
 .parent-child-5 .social-icon:nth-child(3){
+    width: 50px;
+    height: 50px;
+} 
+.parent-child-5 .social-icon:nth-child(4){
     width: 60px;
     height: 60px;
 } 
-.parent-child-5 .social-icon:nth-child(4){
-    width: 70px;
-    height: 70px;
-} 
 
 .parent-child-5 .social-icon:nth-child(5){
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
 } 
 
