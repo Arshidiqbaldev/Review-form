@@ -247,7 +247,16 @@ body {
   height: 40px;
   corner-shape: var(--shape);
   cursor: pointer;
+  transition: all 0.8s ease;
 }
+
+.switch-icon-2{
+  background: #370300;
+
+}
+
+
+
 
 .switch-icon:nth-child(1) {
   transform: rotate(90deg);

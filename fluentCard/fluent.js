@@ -31,15 +31,29 @@ const columns = document.getElementById("columns");
 const rows = document.getElementById("rows");
 
 
-columns.addEventListener("click", () => {
-    parent.style.display = "none";
-    parentTwo.style.display = "flex";
-})
-
-
 rows.addEventListener("click", () => {
 
     parentTwo.style.display = "none";
     parent.style.display = "flex"
+    document.getElementById("rows").addEventListener("click",()=>{
+
+    rows.classList.add("switch-icon-2");
+    columns.classList.remove("switch-icon-2");
+
+
+    })
+
+});
+
+
+
+columns.addEventListener("click", () => {
+
+    parent.style.display = "none";
+    parentTwo.style.display = "flex";
+    rows.classList.remove("switch-icon-2");
+    columns.classList.add("switch-icon-2");
 })
+
+
 
