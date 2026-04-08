@@ -27,3 +27,19 @@ childrenTwo.forEach((child, index) => {
 
 
 
+const columns = document.getElementById("columns");
+const rows = document.getElementById("rows");
+
+
+columns.addEventListener("click", () => {
+    parent.style.display = "none";
+    parentTwo.style.display = "flex";
+})
+
+
+rows.addEventListener("click", () => {
+
+    parentTwo.style.display = "none";
+    parent.style.display = "flex"
+})
+
