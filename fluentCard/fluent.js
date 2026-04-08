@@ -3,7 +3,7 @@
 
 const parent = document.getElementById("parent");
 const children = document.querySelectorAll("#parent .child");
-const myAudio = new Audio("imgs/bubble-pop.mp3");
+const myAudio = new Audio("imgs/water-bubble.wav");
 const myAudio2 = new Audio("imgs/mouse-click.mp3");
 
 
@@ -15,7 +15,7 @@ children.forEach((child, index) => {
         parent.className = "";
         parent.classList.add(`parent-child-${index + 1}`);
         myAudio.currentTime = 0;
-         myAudio.volume = 0.2;
+         myAudio.volume = 0.1;
         myAudio.duration = 0.4;
         myAudio.play();
     });
@@ -33,7 +33,7 @@ childrenTwo.forEach((child, index) => {
         parentTwo.className = "";
         parentTwo.classList.add(`parent-2-child-${index + 1}`);
         myAudio.currentTime = 0;
-         myAudio.volume = 0.2;
+         myAudio.volume = 0.1;
         myAudio.duration = 0.4;
         myAudio.play();
 
@@ -57,7 +57,7 @@ rows.addEventListener("click", () => {
         rows.classList.add("switch-icon-2");
         columns.classList.remove("switch-icon-2");
         myAudio2.currentTime = 0;
-         myAudio.volume = 0.2;
+        myAudio.volume = 0.2;
         myAudio2.duration = 0.4;
         myAudio2.play();
 
@@ -76,7 +76,7 @@ columns.addEventListener("click", () => {
     rows.classList.remove("switch-icon-2");
     columns.classList.add("switch-icon-2");
     myAudio2.currentTime = 0;
-     myAudio.volume = 0.2;
+    myAudio.volume = 0.2;
     myAudio2.duration = 0.4;
     myAudio2.play();
 })

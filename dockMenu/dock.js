@@ -1,6 +1,6 @@
 const parent = document.getElementById("parent");
 const socialIcon = document.querySelectorAll("#parent .social-icon");
-const myAudio = new Audio("imgs/water-bubble.wav");
+const myAudio = new Audio("imgs/bubble-pop.mp3");
 
 
 
