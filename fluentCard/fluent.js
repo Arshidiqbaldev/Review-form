@@ -15,7 +15,7 @@ children.forEach((child, index) => {
         parent.className = "";
         parent.classList.add(`parent-child-${index + 1}`);
         myAudio.currentTime = 0;
-         myAudio.volume = 0.1;
+        myAudio.volume = 0.1;
         myAudio.duration = 0.4;
         myAudio.play();
     });
@@ -33,7 +33,7 @@ childrenTwo.forEach((child, index) => {
         parentTwo.className = "";
         parentTwo.classList.add(`parent-2-child-${index + 1}`);
         myAudio.currentTime = 0;
-         myAudio.volume = 0.1;
+        myAudio.volume = 0.1;
         myAudio.duration = 0.4;
         myAudio.play();
 
@@ -52,17 +52,16 @@ const rows = document.getElementById("rows");
 rows.addEventListener("click", () => {
 
     parentTwo.style.display = "none";
-    parent.style.display = "flex"
-    document.getElementById("rows").addEventListener("click", () => {
+    parent.style.display = "flex";
+   
         rows.classList.add("switch-icon-2");
         columns.classList.remove("switch-icon-2");
         myAudio2.currentTime = 0;
-        myAudio.volume = 0.2;
+        myAudio2.volume = 0.2;
         myAudio2.duration = 0.4;
         myAudio2.play();
 
 
-    })
 
 });
 
@@ -73,13 +72,16 @@ columns.addEventListener("click", () => {
 
     parent.style.display = "none";
     parentTwo.style.display = "flex";
-    rows.classList.remove("switch-icon-2");
     columns.classList.add("switch-icon-2");
-    myAudio2.currentTime = 0;
-    myAudio.volume = 0.2;
-    myAudio2.duration = 0.4;
-    myAudio2.play();
-})
+        rows.classList.remove("switch-icon-2");
+        myAudio2.currentTime = 0;
+        myAudio2.volume = 0.2;
+        myAudio2.duration = 0.4;
+        myAudio2.play();
+
+
+    
+});
 
 
 
