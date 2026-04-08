@@ -16,7 +16,6 @@ children.forEach((child, index) => {
         parent.classList.add(`parent-child-${index + 1}`);
         myAudio.currentTime = 0;
         myAudio.duration = 0.4;
-        myAudio.volume = 0.1;
         myAudio.play();
     });
 });
@@ -34,7 +33,6 @@ childrenTwo.forEach((child, index) => {
         parentTwo.classList.add(`parent-2-child-${index + 1}`);
         myAudio.currentTime = 0;
         myAudio.duration = 0.4;
-        myAudio.volume = 0.1;
         myAudio.play();
 
     });
@@ -58,7 +56,6 @@ rows.addEventListener("click", () => {
         columns.classList.remove("switch-icon-2");
         myAudio2.currentTime = 0;
         myAudio2.duration = 0.4;
-        myAudio2.volume = 0.1;
         myAudio2.play();
 
 
@@ -77,7 +74,6 @@ columns.addEventListener("click", () => {
     columns.classList.add("switch-icon-2");
     myAudio2.currentTime = 0;
     myAudio2.duration = 0.4;
-    myAudio2.volume = 0.1;
     myAudio2.play();
 })
 
