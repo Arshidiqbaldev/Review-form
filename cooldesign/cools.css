@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 90%;
+  width: 100%;
   min-height: 100vh;
   max-width: 500px;
   align-items: center;
@@ -129,7 +129,7 @@ body {
 
 .reset {
   padding: 1rem 2rem;
-  background: var(--white-2);
+  background: var(--white);
   color: var(--black);
   flex-grow: 1;
   outline: none;
