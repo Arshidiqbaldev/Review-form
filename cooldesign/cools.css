@@ -88,7 +88,7 @@ body {
 
 .animated-icon{
   width: 16%;
-  padding: 20px;
+  padding: 10px;
   border-radius: 62px;
   corner-shape:var(--shape);
   background: var(--black-2);
