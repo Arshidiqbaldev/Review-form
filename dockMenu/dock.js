@@ -15,7 +15,7 @@ socialIcon.forEach((icon, index) => {
         myAudio.play();
     });
 
-    
+
 
 });
 

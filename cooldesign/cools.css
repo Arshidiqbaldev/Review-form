@@ -7,8 +7,6 @@
   font-style: normal;
 }
 
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,7 +17,7 @@
 
 :root {
   --brand: #f60900;
-  --brand-dark:#7e0400;
+  --brand-dark: #7e0400;
   --white: #fff;
   --white-2: #e0e0e0;
   --white-3: #888888;
@@ -44,7 +42,7 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   min-height: 100vh;
   max-width: 500px;
@@ -55,21 +53,51 @@ body {
 
 .parent {
   display: flex;
+   width: 100%;
   flex-direction: column;
   gap: 8px;
-  height: 60vh;
-  border-radius: 96px;
+  border-radius: 90px;
   background: var(--black-2);
   corner-shape: var(--shape);
-  padding: 1rem;
+  padding: 20px;
   align-items: center;
   justify-content: center;
-  width: 100%;
   gap: 16px;
 }
 
+.user-info{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 70px;
+  width: 100%;
+  corner-shape:var(--shape);
+  background: var(--black-3);
 
-.count-display{
+}
+
+.user-img{
+  width: 16%;
+  border-radius: 62px;
+  corner-shape: var(--shape);
+}
+
+
+.animated-icon{
+  width: 16%;
+  padding: 20px;
+  border-radius: 62px;
+  corner-shape:var(--shape);
+  background: var(--black-2);
+  color: var(--white-3);
+}
+
+
+
+.count-display {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,20 +105,16 @@ body {
   height: 250px;
   gap: 5px;
   background: var(--black);
-  border-radius: 80px;
+  border-radius: 70px;
   corner-shape: var(--shape);
   padding: 8px;
   transition: all 0.5s ease;
-  
-  box-shadow: inset  0px 0px  30px  var(--brand);
 
-  
+  box-shadow: inset 0px 0px 30px var(--brand);
 }
 
-.count-display:hover{
-
-  box-shadow: inset  0px 0px  40px  var(--white-3);
-
+.count-display:hover {
+  box-shadow: inset 0px 0px 40px var(--white-3);
 }
 
 #countDisplay {
@@ -98,17 +122,23 @@ body {
   font-size: 4rem;
   font-weight: 400;
   text-align: center;
- line-height: 95%;
- display: flex;
-color: var(--white-2);
+  line-height: 95%;
+  display: flex;
+  color: var(--white-2);
 }
 
-.controls {
+.controls{
   display: flex;
   flex-direction: row;
   gap: 8px;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 8px;
+  border-radius: 70px;
+  corner-shape:var(--shape);
+  background: var(--black-3);
+  
 }
 
 .cont-icon {
@@ -117,52 +147,46 @@ color: var(--white-2);
   padding: 8px;
   width: 50px;
   height: 50px;
-  border-radius: 80px;
+  border-radius: 62px;
   corner-shape: var(--shape);
   cursor: pointer;
   transition: all 0.5s ease;
-  box-shadow: inset  0px 0px  5px  var(--white-3);
-  
+  box-shadow: inset 0px 0px 5px var(--white-3);
 }
 
-.cont-icon:hover{
+.cont-icon:hover {
   color: var(--white-2);
-  box-shadow: inset  0px 0px  5px  var(--white-2);
+  box-shadow: inset 0px 0px 5px var(--white-2);
 }
 
 .reset {
   padding: 1rem 2rem;
   background: var(--white);
   color: var(--black);
-  flex-grow: 1;
   outline: none;
   border: none;
-  border-radius: 80px;
+  border-radius: 62px;
   corner-shape: var(--shape);
   font-size: 1rem;
   text-transform: uppercase;
-  font-family:inherit;
+  font-family: inherit;
   font-weight: 700;
   word-spacing: 2px;
   cursor: pointer;
   transition: all 0.5s ease;
-  box-shadow: inset  0px 0px 10px var(--black-3);
-
-
+  box-shadow: inset 0px 0px 10px var(--black-3);
 }
 
-.reset:hover{
-   box-shadow: inset  0px 0px  5px  var(--black-2);
+.reset:hover {
+  box-shadow: inset 0px 0px 5px var(--black-2);
 }
 
-
-.red-tag{
-    font-family: var(--myFont);
+.red-tag {
+  font-family: var(--myFont);
   font-size: 4rem;
   font-weight: 400;
   text-align: center;
- line-height: 95%;
+  line-height: 95%;
 
   color: var(--brand);
-
 }
