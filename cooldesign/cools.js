@@ -11,7 +11,7 @@ let count = 0;
 
 countDec.addEventListener("click", function () {
     count--;
-    displayCount.textContent = count;
+    displayCount.textContent = count + span;
     myAudio.currentTime = 0;
     myAudio.volume = 0.1;
     myAudio.duration = 0.4;

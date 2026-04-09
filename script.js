@@ -1,73 +1,38 @@
 
 
-const clientReviews = [
-    { clientName: "Carly Digital", clientReview: "“Great experience working with Saeed and very good website design. Will also quickly adjust anything you ask for and English fluency is good too. Thanks again Saeed!”", clientRole: "Web Manager, cameronpink.com" },
-    { clientName: "Andre", clientReview: "“Saeed worked very fast and he did exactly what I needed. When I asked for modification he was quick to help and did exactly as I asked, good experience working and I will be back for more!”", clientRole: "CEO, dnbacademy.net" },
+async function getData() {
 
-]
+    const url = 'https://jsonplaceholder.typicode.com/posts'
 
+    let response = await fetch(url);
 
-function drawReviews() {
-    const reviewGrid = document.getElementById("reviewGrid");
+    let data = await response.json();
 
-
-    reviewGrid.innerHTML = " ";
-
-    if (clientReviews.length === 0) {
-        reviewGrid.innerHTML = `<p class="role"> No review found`;
-        return;
-    }
-
-    clientReviews.forEach(function (clientReview) {
-        const reviewCard = document.createElement("div");
-        reviewCard.classList.add("review-card");
-        reviewCard.innerHTML = `
-                    <span class="client-name">${clientReview.clientName}</span>
-                    <p class="client-review">${clientReview.clientReview}</p>
-                    <span class="client-role">${clientReview.clientRole} </span>
-               `;
-        reviewGrid.appendChild(reviewCard);
-
-    });
+    console.log(data);
 
 }
 
+getData();
 
-function addReview() {
 
-    const clientName = document.getElementById("clientName").value.trim();
-    const clientReview = document.getElementById("clientReview").value.trim();
-    const clientRole = document.getElementById("clientRole").value.trim();
+async function postData() {
 
-    if (!clientName || !clientRole || !clientReview) {
-        document.getElementById("error").style.display = "block";
-        return;
-
-    }
-
-    document.getElementById("error").style.display = "none";
-    clientReviews.push({
-        clientName: clientName,
-        clientReview: clientReview,
-        clientRole: clientRole,
+    let response = await fetch('https://jsonplaceholder.typicode.com/posts' , {
+        method: "POST",
+        headers:{"Content-Type": "application/json"},
+        body: JSON.stringify({
+            title:"im title",
+            userId: 5,
+            body:"im the body",
+            id: 0,
+            
+                })
     });
 
+    let data = await response.json();
 
-
-    document.getElementById("clientName").value = '';
-
-    document.getElementById("clientReview").value = '';
-
-    document.getElementById("clientRole").value = '';
-
-    drawReviews();
-
-
+    console.log(data);
 
 }
 
-
-
-
-
-drawReviews();
+postData();

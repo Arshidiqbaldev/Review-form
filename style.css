@@ -78,7 +78,7 @@ body {
 }
 
 .heading {
-  font-family: var(--myFont);
+  font-family: var(--myFont), sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: var(--white-2);
@@ -87,7 +87,7 @@ body {
 }
 
 .project-name {
-  font-family: var(--myFont);
+  font-family: var(--myFont), sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--white-2);
