@@ -3,7 +3,7 @@ const countDec = document.getElementById("dec");
 const countInc = document.getElementById("inc");
 const countReset = document.getElementById("cont-reset")
 const myAudio = new Audio("imgs/bubble-pop.mp3");
-const myAudio2 = new Audio("imgs/bubble-pop.mp3");
+const myAudio2 = new Audio("imgs/mouse-click.mp3");
 let count = 0;
 
 
