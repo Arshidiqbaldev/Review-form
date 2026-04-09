@@ -3,6 +3,7 @@ const countDec = document.getElementById("dec");
 const countInc = document.getElementById("inc");
 const countReset = document.getElementById("cont-reset")
 const myAudio = new Audio("imgs/bubble-pop.mp3");
+const myAudio2 = new Audio("imgs/bubble-pop.mp3");
 let count = 0;
 
 
@@ -34,10 +35,10 @@ countInc.addEventListener("click", function () {
 countReset.addEventListener("click", function () {
     count = 0;
     displayCount.textContent = count;
-    myAudio.currentTime = 0;
-    myAudio.volume = 0.1;
-    myAudio.duration = 0.4;
-    myAudio.play();
+    myAudio2.currentTime = 0;
+    myAudio2.volume = 0.1;
+    myAudio2.duration = 0.4;
+    myAudio2.play();
 })
 
 
