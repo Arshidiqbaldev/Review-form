@@ -10,7 +10,7 @@ socialIcon.forEach((icon, index) => {
         parent.className = "";
         parent.classList.add(`parent-child-${index + 1}`);
         myAudio.currentTime = 0;
-        myAudio.volume = 0.1;
+        myAudio.volume = 0.2;
         myAudio.duration = 0.4;
         myAudio.play();
     });
