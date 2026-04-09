@@ -143,11 +143,11 @@ body {
   word-spacing: 2px;
   cursor: pointer;
   transition: all 0.5s ease;
-  box-shadow: inset  0px 0px  5px  var(--black-3);
+  
 
 
 }
 
 .reset:hover{
-   box-shadow: inset  0px 0px  5px  var(--black-2);
+   box-shadow: inset  0px 0px  5px  var(--black-3);
 }
