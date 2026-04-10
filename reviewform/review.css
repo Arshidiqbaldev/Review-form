@@ -208,17 +208,18 @@ textarea {
 
   .content {
     width: 100%;
+    max-width: 500px;
   }
 
   .formDiv {
-    width: 30%;
+  
       min-height: 70vh;
   }
 
 
 
   .reviewSec {
-    width: 30%;
+   
   }
 
   #reviewGrid {
