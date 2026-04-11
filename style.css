@@ -116,7 +116,7 @@ body {
   corner-shape: var(--shape);
   cursor: pointer;
   text-transform: capitalize;
-  box-shadow: 0px 3px 2px -1px #ff736e inset;
+  box-shadow: 0px 2px 2px -1px #ff736e inset;
 
 }
 
