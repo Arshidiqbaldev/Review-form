@@ -145,8 +145,8 @@ body {
 
 @keyframes fadeUp1 {
   from {
-    transform: scale(1.05) translateY(-10px);
-    background-color: var(--brand-dark);
+   
+    background-color: var(--black-3);
   }
 
   to {
