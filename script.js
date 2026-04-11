@@ -1,24 +1,19 @@
-class Human {
-    age = 20;
-    #cls = 10;
+const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("fadeUp");
+        }
+        else {
+            entry.target.classList.remove("fadeUp");
+        }
 
-  
-
-    get classFun (){
-        return this.#cls;
-    }
-
-    set classFun2(val){
-        this.#cls = val;
-    }
+    })
+}, { threshold: 0.10 });
 
 
 
-}
+const allElements = document.querySelectorAll(".project-card");
 
-
-const  human = new Human();
-human.classFun2 = 30;
-
-
-console.log(human.classFun);
+allElements.forEach((el) => {
+    observer.observe(el);
+})

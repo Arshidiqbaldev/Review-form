@@ -33,8 +33,13 @@
   --shape: squircle;
   --myFont: "myFont", sans-serif;
   --inset-shadow: 0px 1.5px 1px 0px #ffffff0f;
-  --emboss-shadow: 0px 1.3px 2px -1px #ffffff33 inset;
+  --emboss-shadow: 0px 1.5px 1px -1px #ffffff33 inset;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
 
 body {
   font-family: "Urbanist", sans-serif;
@@ -125,7 +130,7 @@ textarea {
   font-family: inherit;
   corner-shape: var(--shape);
   cursor: pointer;
-  box-shadow: 0px 3px 2px -1px #ff6b66 inset;
+  box-shadow: 0px 3px 2px -1px #ff6762 inset;
 }
 
 #error {

@@ -45,27 +45,6 @@ childrenTwo.forEach((child, index) => {
 const columns = document.getElementById("columns");
 const rows = document.getElementById("rows");
 
-
-
-//for rows
-
-rows.addEventListener("click", () => {
-
-    parentTwo.style.display = "none";
-    parent.style.display = "flex";
-
-    rows.classList.add("switch-icon-2");
-    columns.classList.remove("switch-icon-2");
-    myAudio2.currentTime = 0;
-    myAudio2.volume = 0.2;
-    myAudio2.duration = 0.4;
-    myAudio2.play();
-
-
-
-});
-
-
 //for columns
 
 columns.addEventListener("click", () => {
@@ -82,6 +61,26 @@ columns.addEventListener("click", () => {
 
 
 });
+
+//for rows
+
+rows.addEventListener("click", () => {
+    parentTwo.style.display = "none";
+    parent.style.display = "flex";
+
+    rows.classList.add("switch-icon-2");
+    columns.classList.remove("switch-icon-2");
+    myAudio2.currentTime = 0;
+    myAudio2.volume = 0.2;
+    myAudio2.duration = 0.4;
+    myAudio2.play();
+
+
+
+});
+
+
+
 
 
 
