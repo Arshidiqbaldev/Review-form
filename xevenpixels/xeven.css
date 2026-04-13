@@ -81,7 +81,7 @@ body {
   backdrop-filter: blur(4px);
   transition: all 1s ease;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
   align-items: center;
   justify-content: center;
   user-select: none;

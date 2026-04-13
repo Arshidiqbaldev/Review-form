@@ -56,7 +56,7 @@ body {
    width: 100%;
   flex-direction: column;
   gap: 8px;
-  border-radius: 90px;
+  border-radius: 80px;
   background: var(--black-2);
   corner-shape: var(--shape);
   padding: 20px;
