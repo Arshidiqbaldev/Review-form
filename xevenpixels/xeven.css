@@ -35,20 +35,22 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap:2rem;
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 8px;
-  max-width: 1000px;
+  padding: 2rem;
+  max-width: 1100px;
   min-height: 100vh;
+
 }
 
 .parent{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
+    padding:1rem 0;
 }
 
 .xeven,.pixels{
@@ -58,8 +60,7 @@ body {
     grid-template-columns: repeat(5,1fr);
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    padding: 1rem;
+
 
 }
 
@@ -70,14 +71,15 @@ body {
 
 
 .card{
-    padding: 16px;
-    background: #00000047;
+    padding: 10px;
+    background: #4e4e4e47;
     border: var(--border);
     height: 80px;
     width: 80px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
     transition: all 1s ease;
     cursor: pointer;
+    border-radius: 5px;
     
 }
 
@@ -135,6 +137,10 @@ body {
 
 
 @media (min-width:1000px){
+
+    .parent{
+        gap: 3rem;
+    }
 
     .card{
         width: 200px;
