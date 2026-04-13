@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/OffBit-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/OffBit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --brand: #f60900;
+  --white: #fff;
+  --white-2: #e0e0e0;
+  --white-3: #888888;
+  --black: #000000;
+  --black-2: #1c1a1a;
+  --black-3: #121212;
+  --border: 1px solid #1e1e1e;
+  --shape: squircle;
+  --myFont: "myFont", sans-serif;
+  --inset-shadow: 0px 1.5px 1px 0px #ffffff0f;
+  --emboss-shadow: 0px 1.5px 1px -1px #ffffff33 inset;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  max-width: 500px;
+  min-height: 100vh;
+}
+
+.heading {
+  font-family: var(--myFont);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white-3);
+}
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.item {
+  gap: 8px;
+  background: var(--black-2);
+  border-radius: 32px;
+  corner-shape: var(--shape);
+  justify-content: start;
+  align-items: center;
+  box-shadow: var(--emboss-shadow);
+  transition: all 0.5s;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  font-weight: 600;
+  border: none;
+  background: none;
+  color: var(--white-2);
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 100%;
+  text-align: left;
+  transition: all 0.5;
+  cursor: pointer;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  line-height: 1;
+  flex-shrink: 0;
+  height: 14px;
+  width: 14px;
+  font-size: 20px;
+}
+
+.answer-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  grid-template-columns: 1fr;
+  transition: all 0.5s;
+}
+
+.answer-parent {
+  overflow: hidden;
+  font-size: 16px;
+  color: var(--white-2);
+  line-height: 150%;
+}
+
+.answer {
+  padding: 16px;
+}
+
+.item.open {
+  background: var(--black-3);
+}
+
+.item.open .answer-wrap {
+  grid-template-rows: 1fr;
+}
+
+.item.open .icon {
+  transform: rotate(45deg);
+  color: var(--brand);
+}
+
+.item.open .question {
+  color: var(--brand);
+}
