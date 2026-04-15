@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            background: white;
+            color: black;
+            width: 100%;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            min-height: 100vh;
+            width: 100%;
+            max-width: 1140px;
+            padding: 1rem;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .card {
+            display: flex;
+            width: 200px;
+            height: 300px;
+            background: #c4c4c4;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .card:nth-child(2){
+            animation-delay: 200ms;
+        }
+
+         .card:nth-child(3){
+            animation-delay: 400ms;
+        }
+
+
+        .animate {
+            animation: fadeUp 0.5s linear alternate both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                transform: translateY(100px);
+                
+            }
+
+            to {
+                transform: translateY(0);
+             
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="parent">
+
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+
+
+    </div>
+
+    <div class="parent">
+
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+
+
+    </div>
+
+
+
+    <script>
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate")
+                }
+                else{
+                    entry.target.classList.remove("animate");
+
+                }
+
+            });
+        }, {threshold : 0.20});
+
+
+        var elements = document.querySelectorAll(".card");
+        elements.forEach(el=>{
+            observer.observe(el);
+        })
+
+
+    </script>
+</body>
+
+</html>
