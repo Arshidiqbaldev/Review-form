@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Theme</title>
+
+    <style>
+        :root {
+            --bg: white;
+            --text: black;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            transition: 0.3s;
+            height: 100vh;
+            transition: all 0.5s;
+        }
+
+        button {
+            margin: 10px;
+            cursor: pointer;
+            padding: 10px 20px;
+            background: transparent;
+
+            color: var(--text);
+            border: 1px solid grey;
+            border-radius: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="light">Light</button>
+    <button id="dark">Dark</button>
+    <button id="system">System</button>
+
+    <h1>Hello</h1>
+
+    <script>
+ 
+
+        let root = document.documentElement;
+        let lightBtn = document.getElementById("light");
+        let darkBtn = document.getElementById("dark");
+        let systemBtn = document.getElementById("system");
+
+        function setTheme(theme) {
+            if (theme === "light") {
+                root.style.setProperty("--bg", "#ffffff");
+                root.style.setProperty("--text", "#000000")
+            }
+
+            else if (theme === "dark") {
+                root.style.setProperty("--bg", "#000000");
+                root.style.setProperty("--text", "#ffffff");
+
+            }
+
+            else if (theme === "system") {
+                var isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                if (isDark) {
+                    setTheme("dark");
+                }
+                else {
+                    setTheme("light");
+                }
+            }
+        }
+
+        lightBtn.onclick = function () {
+            setTheme("light");
+        }
+
+        darkBtn.onclick = function () {
+            setTheme("dark");
+        }
+
+        systemBtn.onclick = function () {
+            setTheme("system");
+        }
+
+
+        setTheme("system");
+
+
+        l
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

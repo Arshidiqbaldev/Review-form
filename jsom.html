@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Theme System (Clean)</title>
+
+    <style>
+        :root {
+            --bg: white;
+            --text: black;
+            --btn-bg: #f0f0f0;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial;
+            transition: all 0.3s;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px;
+            background: var(--btn-bg);
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="light">☀️</button>
+    <button id="dark">🌙</button>
+    <button id="system">🖥️</button>
+
+    <h1>Hello Arshid</h1>
+    <p>This is theme system using object</p>
+
+    <script>
+
+
+
+
+        let lightBtn = document.getElementById("light");
+        let darkBtn = document.getElementById("dark");
+        let systemBtn = document.getElementById("system");
+
+
+        var root = document.documentElement;
+
+        var themes = {
+            dark: {
+                "--bg": "#111111",
+                "--text": "#ffffff",
+                "--btn-bg": "#333333"
+            },
+            light: {
+                "--bg": "#ffffff",
+                "--text": "#000000",
+                "--btn-bg": "#f0f0f0"
+            }
+        };
+
+
+
+        function applyTheme(name) {
+
+            var theme = themes[name];
+
+            for (var key in theme) {
+                root.style.setProperty(key, theme[key]);
+            }
+
+        }
+
+
+        function setTheme(mode) {
+            if (mode === "system") {
+                var isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                if (isDark) {
+                    applyTheme("dark");
+
+                }
+                else {
+                    applyTheme("light");
+
+                }
+            }
+
+            else {
+                applyTheme(mode);
+            }
+
+
+        }
+
+        setTheme("system");
+
+        lightBtn.addEventListener("click", () => {
+            setTheme("light")
+        })
+
+        darkBtn.addEventListener("click", () => {
+            setTheme("dark")
+        })
+
+        systemBtn.addEventListener("click", () => {
+            setTheme("system")
+        })
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
