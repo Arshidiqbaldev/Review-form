@@ -83,6 +83,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
+  padding: 4rem 0;
 }
 
 .card {
@@ -181,13 +182,13 @@ transform: rotate(-4deg);
 }
 
 .floating-emoji:nth-child(1) {
-  top:15%;
+  top:22%;
   left: 0;
   animation-delay: 0s;
 }
 
 .floating-emoji:nth-child(2) {
-  bottom: -10%;
+  bottom: 0;
   right: 0;
   animation-delay: 1s;
 }
@@ -198,14 +199,14 @@ transform: rotate(-4deg);
   }
 
   .floating-emoji:nth-child(1) {
-  top: 5%;
-  left: 2%;
+  top: 10%;
+  left: 0;
 
 }
 
 .floating-emoji:nth-child(2) {
-  bottom:4%;
-  right: 4%;
+  bottom:0%;
+  right: 0;
  
 }
 }
