@@ -185,14 +185,14 @@ body {
   }
 
   .floating-emoji:nth-child(1) {
-  top: 8%;
-  left: 5%;
+  top: 5%;
+  left: 2%;
 
 }
 
 .floating-emoji:nth-child(2) {
-  bottom: 8%;
-  right: 5%;
+  bottom:4%;
+  right: 4%;
  
 }
 }
