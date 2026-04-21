@@ -18,7 +18,7 @@ socialIcon.forEach((icon, index) => {
         parent.className = ""; // reset back
     };
 
-    icon.addEventListener("mouseenter", handleMouseEnter);
+    icon.addEventListener("mouseover", handleMouseEnter);
     icon.addEventListener("mouseleave", handleMouseLeave);
 
 });

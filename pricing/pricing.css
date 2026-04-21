@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/OffBit-Bold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --brand: #f60900;
+  --brand-dark: #7e0400;
+  --white: #fff;
+  --white-2: #e0e0e0;
+  --white-3: #888888;
+  --black: #000000;
+  --black-2: #141414;
+  --b-color: #e3ded5;
+  --black-3: #222222;
+  --border: 1px solid #1e1e1e;
+  --shape: squircle;
+  --myFont: "myFont", sans-serif;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1000px;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.pricing {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+}
+
+.heading1 {
+  font-family: var(--myFont);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand);
+  text-align: center;
+}
+
+.desc {
+  font-size: 1rem;
+  color: var(--white-2);
+  text-align: center;
+  max-width: 600px;
+}
+
+.pricing-div {
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--black-2);
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid var(--white);
+  width: 100%;
+  align-items: start;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px var(--white);
+}
+
+.card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 8px 8px var(--white);
+}
+
+.card:nth-child(2) {
+  border-color: var(--brand);
+  box-shadow: 3px 3px var(--brand);
+  padding: 1.5rem 0.8rem;
+}
+
+.card:nth-child(2):hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 8px 8px var(--brand);
+}
+
+.card .heading2 {
+  font-family: var(--myFont);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.card .price {
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.card .features {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-position: inside;
+  color: var(--white-3);
+}
+.card .features .feature {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--white-3);
+}
+
+::marker {
+  color: var(--brand);
+}
+
+.card .btn {
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.3s ease;
+  font-family: inherit;
+}
+.card .btn:hover {
+  background: var(--white-2);
+}
+
+.floating-emoji {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.floating-emoji:nth-child(1) {
+  top: 20%;
+  left: 0;
+  animation-delay: 0s;
+}
+
+.floating-emoji:nth-child(2) {
+  bottom: -10%;
+  right: 0;
+  animation-delay: 1s;
+}
+
+@media (max-width: 768px) {
+  .pricing-div {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-emoji:nth-child(1) {
+  top: 8%;
+  left: 5%;
+
+}
+
+.floating-emoji:nth-child(2) {
+  bottom: 8%;
+  right: 5%;
+ 
+}
+}
