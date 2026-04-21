@@ -48,7 +48,8 @@ body {
   max-width: 1000px;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 2rem;
+  overflow: hidden;
 }
 
 .pricing {
@@ -78,7 +79,7 @@ body {
 .pricing-div {
   display: grid;
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
@@ -98,9 +99,14 @@ body {
   box-shadow: 3px 3px var(--white);
 }
 
-.card:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 8px 8px var(--white);
+
+
+.card:nth-child(1) {
+transform: rotate(-4deg);
+}
+
+.card:nth-child(3) {
+  transform: rotate(6deg);
 }
 
 .card:nth-child(2) {
@@ -112,6 +118,12 @@ body {
 .card:nth-child(2):hover {
   transform: translate(-5px, -5px);
   box-shadow: 8px 8px var(--brand);
+}
+
+
+.card:hover {
+  transform: translate(-5px, -5px) rotate(0);
+  box-shadow: 8px 8px var(--white);
 }
 
 .card .heading2 {
@@ -165,6 +177,7 @@ body {
   position: absolute;
   width: 40px;
   height: 40px;
+  z-index: 2;
 }
 
 .floating-emoji:nth-child(1) {
