@@ -168,7 +168,7 @@ body {
 }
 
 .floating-emoji:nth-child(1) {
-  top: 20%;
+  top:15%;
   left: 0;
   animation-delay: 0s;
 }
