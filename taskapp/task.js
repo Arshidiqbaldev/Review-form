@@ -14,7 +14,13 @@ const tasks = [
         type: "easy",
         done: false,
     },
+    {
+        text: "running",
+        type: "medium",
+        done: true,
+    },
 ];
+
 
 //rander task
 
@@ -86,6 +92,12 @@ function addTask() {
     });
 
     document.getElementById("taskInput").value = "";
+    document.getElementById("btn").classList.add("btn-1");
+    setTimeout(() => {
+        document.getElementById("btn").classList.remove("btn-1");
+
+    }, 500);
+
 
     randerTask()
 
@@ -95,11 +107,17 @@ function addTask() {
 document.querySelector(".addtask").addEventListener("click", addTask);
 
 
-
 //delete task
 
-function deleteTask(index){
+function deleteTask(index) {
+
+
+
+
     tasks.splice(index, 1);
+
+
+
     randerTask();
 }
 

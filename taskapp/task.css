@@ -78,7 +78,7 @@ body {
   border: var(--border);
   background: var(--white);
   box-shadow: 3px 3px var(--black);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
   border-radius: 1rem;
 }
@@ -125,6 +125,8 @@ select:focus {
   font-size: 0.8rem;
   cursor: pointer;
   font-weight: 600;
+  transition: all 0.5s ease;
+
 }
 
 .taskparent {
@@ -219,6 +221,16 @@ background:#ffb0aa;
   text-transform: capitalize;
   display: none;
 }
+
+
+.btn-1{
+  background: var(--brand-dark);
+  color: var(--white);
+}
+
+
+
+
 
 @media (max-width: 768px) {
 
