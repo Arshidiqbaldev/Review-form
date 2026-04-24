@@ -29,6 +29,10 @@ function randerTask() {
     const list = document.querySelector(".taskGrid");
     list.innerHTML = "";
 
+    if (tasks.length === 0) {
+        list.innerHTML = `<p class="empty">add your first task</p>`;
+    }
+
     tasks.forEach(function (task, index) {
 
         const item = document.createElement("div");
@@ -38,6 +42,9 @@ function randerTask() {
             item.classList.add("done");
 
         }
+
+
+
 
         item.innerHTML = `
                         <input class="changetask" type="checkbox" ${task.done ? "checked" : ""} onchange="toggleTask(${index})">

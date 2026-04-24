@@ -229,6 +229,16 @@ background:#ffb0aa;
 }
 
 
+.empty{
+  color: var(--brand);
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  grid-column: 1 /-1;
+  text-transform: capitalize;
+}
+
 
 
 
