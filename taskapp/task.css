@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/OffBit-Bold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --brand: #f60900;
+  --brand-dark: #7e0400;
+  --white: #fff;
+  --white-2: #e0e0e0;
+  --white-3: #888888;
+  --black: #000000;
+  --black-2: #141414;
+  --b-color: #e3ded5;
+  --black-3: #222222;
+  --border: 1px solid #1e1e1e;
+  --shape: squircle;
+  --myFont: "myFont", sans-serif;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background: var(--white);
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 800px;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.head1,
+.head2 {
+  font-family: var(--myFont);
+  font-size: 2rem;
+  color: var(--black-3);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: var(--border);
+  background: var(--white);
+  box-shadow: 3px 3px var(--black);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.form-content:hover {
+  transform: translate(-5px, -5px);
+  border-color: var(--brand);
+  box-shadow: 8px 8px var(--brand);
+}
+
+input,
+select {
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: var(--border);
+  border-color: var(--b-color);
+  background: none;
+  color: var(--black);
+  transition: all 0.5s ease;
+  text-transform: capitalize;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.addtask {
+  padding: 0.8rem 2rem;
+  font-family: inherit;
+  text-transform: capitalize;
+  background: var(--brand);
+  color: var(--black);
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.taskparent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.taskGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, auto);
+  padding: 10px;
+  background: var(--white-2);
+  gap: 10px;
+  border-radius: 2rem;
+}
+
+.easy,
+.medium,
+.hard {
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: var(--black-2);
+  font-size: 0.7rem;
+
+}
+
+.easy {
+background: #ffe8bf;
+}
+
+.medium {
+background: #d0ffc3;
+}
+
+.hard {
+background:#ffb0aa;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  box-shadow: 3px 3px var(--white-3);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  border-radius: 1rem;
+  background: var(--white);
+  border: 1px solid var(--white-3);
+  padding: 1rem;
+}
+
+.card:hover {
+  transform: translate(-5px, -5px);
+  border-color: var(--brand);
+  box-shadow: 8px 8px var(--brand);
+}
+
+.task-text {
+  font-size: 1rem;
+}
+
+.deleteTask {
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  text-transform: capitalize;
+  background: var(--white-2);
+  color: var(--black);
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.done .task-text{
+    text-decoration: line-through;
+    color: var(--brand);
+}
+
+
+
+
+.error{
+  color: var(--brand);
+  font-weight: 500;
+  text-transform: capitalize;
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+.taskGrid {
+ 
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, auto);
+
+}
+
+
+}

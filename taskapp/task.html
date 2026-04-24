@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task App</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="parent">
+            <div class="form-content">
+                <h1 class="head1">add your task</h1>
+
+                <div class="form-div">
+                    <input type="text" placeholder="add your task" id="taskInput">
+                    <select name="type" id="taskType">
+                        <option value="hard">hard</option>
+                        <option value="medium" selected>medium</option>
+                        <option value="easy">easy</option>
+                    </select>
+                    <button class="addtask">add task</button>
+
+                </div>
+
+                <p class="error"> please fill the required fields </p>
+
+
+            </div>
+
+            <div class="taskparent">
+                <h2 class="head2">your tasks</h2>
+                <div class="taskGrid">
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="task.js"></script>
+</body>
+
+</html>
