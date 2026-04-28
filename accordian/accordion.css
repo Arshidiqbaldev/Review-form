@@ -240,6 +240,21 @@ body {
 .item-2.open-2 .answer-div{
   grid-template-rows: 1fr;
   padding: 10px;
+  animation: scaleIn 1s ease alternate both;
+}
+
+
+@keyframes scaleIn {
+  from{
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+   to{
+    transform: scale(1);
+    opacity: 1;
+  }
+  
 }
 
 .item-2.open-2 .icon-2{
