@@ -126,7 +126,6 @@ select:focus {
   cursor: pointer;
   font-weight: 600;
   transition: all 0.5s ease;
-
 }
 
 .taskparent {
@@ -152,19 +151,18 @@ select:focus {
   border-radius: 8px;
   color: var(--black-2);
   font-size: 0.7rem;
-
 }
 
 .easy {
-background: #ffe8bf;
+  background: #ffe8bf;
 }
 
 .medium {
-background: #d0ffc3;
+  background: #d0ffc3;
 }
 
 .hard {
-background:#ffb0aa;
+  background: #ffb0aa;
 }
 
 .card {
@@ -207,49 +205,37 @@ background:#ffb0aa;
   cursor: pointer;
 }
 
-.done .task-text{
-    text-decoration: line-through;
-    color: var(--brand);
+.done .task-text {
+  text-decoration: line-through;
+  color: var(--brand);
 }
 
-
-
-
-.error{
+.error {
   color: var(--brand);
   font-weight: 500;
   text-transform: capitalize;
   display: none;
 }
 
-
-.btn-1{
+.btn-1 {
   background: var(--brand-dark);
   color: var(--white);
 }
 
-
-.empty{
+.empty {
   color: var(--brand);
   font-size: 1rem;
   text-align: center;
   width: 100%;
   font-weight: 500;
-  grid-column: 1 /-1;
+  grid-column-start: 1;
+  grid-column-end: span 2;
   text-transform: capitalize;
 }
 
-
-
-
 @media (max-width: 768px) {
-
-.taskGrid {
- 
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, auto);
-
-}
-
-
+  .taskGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+  }
 }
