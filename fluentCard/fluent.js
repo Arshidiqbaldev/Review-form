@@ -3,7 +3,7 @@
 
 const parent = document.getElementById("parent");
 const children = document.querySelectorAll("#parent .child");
-const myAudio = new Audio("imgs/water-bubble.wav");
+const myAudio = new Audio("imgs/maximize-006.mp3");
 const myAudio2 = new Audio("imgs/mouse-click.mp3");
 
 
@@ -15,7 +15,7 @@ children.forEach((child, index) => {
         parent.className = "";
         parent.classList.add(`parent-child-${index + 1}`);
         myAudio.currentTime = 0;
-        myAudio.volume = 0.2;
+        myAudio.volume = 0.3;
         myAudio.duration = 0.4;
         myAudio.play();
     });
@@ -33,7 +33,7 @@ childrenTwo.forEach((child, index) => {
         parentTwo.className = "";
         parentTwo.classList.add(`parent-2-child-${index + 1}`);
         myAudio.currentTime = 0;
-        myAudio.volume = 0.2;
+        myAudio.volume = 0.3;
         myAudio.duration = 0.4;
         myAudio.play();
 

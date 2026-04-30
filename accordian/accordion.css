@@ -186,6 +186,7 @@ body {
   justify-content: space-between;
   cursor: pointer;
   padding: 10px;
+  font-weight: 500;
   transition: all 0.8s ease;
 
 
@@ -209,7 +210,7 @@ body {
 
 .answer-child{
   overflow: hidden;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--white-2);
   line-height: 150%;
 }

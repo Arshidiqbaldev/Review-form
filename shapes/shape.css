@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/OffBit-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("fonts/OffBit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ndot";
+  src: url("fonts/ndot-47-inspired-by-nothing.otf") format("opentype");
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --brand: #f60900;
+  --white: #fff;
+  --white-2: #b4b4b4;
+  --white-3: #888888;
+  --black: #000000;
+  --black-2: #131313;
+  --black-3: #2c2c2c;
+  --border: 1px solid #1e1e1e;
+  --shape: squircle;
+  --myFont: "myFont", sans-serif;
+  --myFont-2: "ndot", sans-serif;
+}
+
+body {
+  font-family: "SN Pro", sans-serif;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  min-height: 100vh;
+  justify-content:center;
+  padding:20px;
+  
+  
+}
+
+
+
+.box{
+  display: flex;
+
+  width: 400px;
+  height: 200px;
+  border-radius: 22px;
+  background: var(--black-3);
+  position: relative;
+
+
+}
+
+
+.box::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80px;
+  width: 80px;
+  border-bottom-left-radius: 22px;
+  box-shadow: 10px -10px 0 10px  #000 ;
+  
+}
