@@ -1,18 +1,18 @@
 const items = [
     {
         id: 1,
-        pname: "Item 1",
+        pname: "mobile",
         description: "This is the description for Item 1."
     },
     {
         id: 2,
-        pname: "Item 2",
+        pname: "Airbuds",
         description: "This is the description for Item 2."
 
     },
     {
         id: 3,
-        pname: "Item 3",
+        pname: "Headphones",
         description: "This is the description for Item 3."
     },
 
@@ -75,7 +75,7 @@ function renderCart() {
         cardCard.innerHTML = `
             <h3 class="cart-item">${item.pname}</h3>
             <p class="cart-description">${item.description}</p>
-            <button class="delete-btn" onclick="removeCart(${index})">Remove</button>
+            <button class="delete-btn" onclick="removeCart(${index})">X</button>
         `;
 
 
