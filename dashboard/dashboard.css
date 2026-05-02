@@ -62,7 +62,7 @@ body {
   padding: 10px;
   background: var(--black-2);
   background-position: center;
-  background-image: url(fonts/finalv2.svg);
+ 
   background-size: cover;
   background-repeat: repeat;
 }
