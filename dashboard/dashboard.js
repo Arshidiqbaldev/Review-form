@@ -73,7 +73,7 @@ function renderCart() {
         cardCard.classList.add("card-card");
 
         cardCard.innerHTML = `
-            <h3 class="car-item">${item.pname}</h3>
+            <h3 class="cart-item">${item.pname}</h3>
             <p class="cart-description">${item.description}</p>
             <button class="delete-btn" onclick="removeCart(${index})">Remove</button>
         `;

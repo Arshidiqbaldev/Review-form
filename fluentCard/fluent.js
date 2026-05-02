@@ -3,7 +3,7 @@
 
 const parent = document.getElementById("parent");
 const children = document.querySelectorAll("#parent .child");
-const myAudio = new Audio("imgs/maximize-006.mp3");
+
 const myAudio2 = new Audio("imgs/mouse-click.mp3");
 
 
@@ -32,10 +32,7 @@ childrenTwo.forEach((child, index) => {
     child.addEventListener("click", () => {
         parentTwo.className = "";
         parentTwo.classList.add(`parent-2-child-${index + 1}`);
-        myAudio.currentTime = 0;
-        myAudio.volume = 0.3;
-        myAudio.duration = 0.4;
-        myAudio.play();
+
 
     });
 });
@@ -53,10 +50,6 @@ columns.addEventListener("click", () => {
     parentTwo.style.display = "flex";
     columns.classList.add("switch-icon-2");
     rows.classList.remove("switch-icon-2");
-    myAudio2.currentTime = 0;
-    myAudio2.volume = 0.2;
-    myAudio2.duration = 0.4;
-    myAudio2.play();
 
 
 
