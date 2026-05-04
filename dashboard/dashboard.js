@@ -51,8 +51,8 @@ displayItems();
 const cart = [];
 
 function addCart(index) {
-    cart.push(items[index]);   // store selected item
-    renderCart();  // re-render UI
+    cart.push(items[index]);
+    renderCart();
 
     console.log(cart);
 
@@ -92,6 +92,6 @@ function renderCart() {
 
 
 function removeCart(index) {
-    cart.splice(index, 1); // remove 1 item at index
-    renderCart();          // update UI
+    cart.splice(index, 1);
+    renderCart();
 }
