@@ -15,7 +15,7 @@
   --white-2: #e0e0e0;
   --white-3: #888888;
   --black: #000000;
-  --black-2: #1c1a1a;
+  --black-2: #131313;
   --black-3: #121212;
   --border: 1px solid #1e1e1e;
   --shape: squircle;
@@ -24,15 +24,13 @@
 
 body {
   font-family: "Urbanist", sans-serif;
-  background: var(--black);
+  background: var(--black-2);
   color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-image: url("imgs/6000-dot.svg");
-  background-size: contain;
-  background-position: center center;
+ 
 }
 
 .content {
