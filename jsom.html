@@ -15,7 +15,7 @@
             background: var(--bg);
             color: var(--text);
             font-family: Arial;
-            transition: all 0.3s;
+  
         }
 
         button {
@@ -47,9 +47,9 @@
         let systemBtn = document.getElementById("system");
 
 
-        var root = document.documentElement;
+        let root = document.documentElement;
 
-        var themes = {
+        let themes = {
             dark: {
                 "--bg": "#111111",
                 "--text": "#ffffff",
@@ -66,9 +66,9 @@
 
         function applyTheme(name) {
 
-            var theme = themes[name];
+            let theme = themes[name];
 
-            for (var key in theme) {
+            for (let key in theme) {
                 root.style.setProperty(key, theme[key]);
             }
 
@@ -77,7 +77,7 @@
 
         function setTheme(mode) {
             if (mode === "system") {
-                var isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                let isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
                 if (isDark) {
                     applyTheme("dark");
 
