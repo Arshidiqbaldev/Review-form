@@ -35,12 +35,13 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  font-size: 14px;
 }
 .content {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 92%;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
