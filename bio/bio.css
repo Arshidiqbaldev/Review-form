@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+@font-face {
+  font-family: "CMGeom";
+  src: url("imgs/CMGeom-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --brand: #f60900;
+  --white: #fff;
+  --white-2: #b4b4b4;
+  --white-3: #888888;
+  --black: #000000;
+  --black-2: #131313;
+  --black-3: #2c2c2c;
+  --border: 1px solid #1e1e1e;
+  --shape: squircle;
+  --myFont: "CMGeom", sans-serif;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 10px;
+  gap: 30px;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+}
+
+.img-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: var(--border);
+  width: auto;
+  height: auto;
+}
+
+.arshid {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+}
+
+.about-desc-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.name-div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 24px;
+  font-family: var(--myFont);
+}
+
+.verfied {
+  width: 20px;
+  height: 20px;
+  color: #1874fc;
+  margin-top: -3px;
+}
+
+.about-desc {
+  display: flex;
+  flex-direction: column;
+  color: var(--white-2);
+  gap: 10px;
+}
+
+.plus-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--white-3);
+  z-index: 2;
+}
+
+.plus-icon-1 {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.plus-icon-2 {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.plus-icon-3 {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+}
+
+.plus-icon-4 {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    width: 100%;
+  }
+
+  .about-card {
+    flex-direction: row;
+  }
+
+  .img-div {
+    border: none;
+    border-right: var(--border);
+  }
+
+  .about-card:nth-child(2){
+    width: 30%;
+  }
+}

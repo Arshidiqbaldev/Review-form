@@ -14,6 +14,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "myFont-2";
+  src: url("fonts/ndot.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,6 +39,7 @@
   --border: 1px solid #1e1e1e;
   --shape: squircle;
   --myFont: "myFont", sans-serif;
+  --myFont-2: "myFont-2";
 }
 
 body {
@@ -57,10 +65,11 @@ body {
 }
 
 .heading {
-  font-family: var(--myFont);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--brand);
+  font-family: var(--myFont-2);
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: var(--white-2);
+  text-transform: uppercase;
 }
 
 #parent {
