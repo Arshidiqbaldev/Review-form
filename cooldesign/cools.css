@@ -168,8 +168,8 @@ body {
   border-radius: 62px;
   corner-shape: var(--shape);
   font-size: 1rem;
-  text-transform: uppercase;
-  font-family: inherit;
+  text-transform: capitalize;
+  font-family: "Urbanist", sans-serif;
   font-weight: 700;
   word-spacing: 2px;
   cursor: pointer;

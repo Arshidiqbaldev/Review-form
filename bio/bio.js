@@ -1,20 +1,43 @@
-const observer = new IntersectionObserver(function (entries) {
 
-    entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("fullheader")
-        }
+const plusIcons = document.querySelectorAll(".plus-icon")
 
 
-    })
+function addAnimate() {
 
 
-}, { threshold: 0.20 });
 
-const header = document.querySelector(".header");
+    plusIcons.forEach((icon) => {
+        icon.classList.add("animate-icon");
 
-if (header) {
-    observer.observe(header)
+        
+
+
+    });
 }
 
+setInterval(addAnimate, 1000);
 
+
+
+
+
+try {
+
+    const questions = document.querySelectorAll(".ques");
+    questions.forEach(function (question) {
+        question.addEventListener("click", () => {
+            const item = question.parentElement;
+            const isOpen = item.classList.contains("open");
+            document.querySelectorAll(".item").forEach(i => {
+                i.classList.remove("open");
+            })
+            if (!isOpen) item.classList.add("open");
+
+        });
+
+    });
+
+} catch (error) {
+    console.error(error);
+
+}

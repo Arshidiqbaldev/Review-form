@@ -79,6 +79,7 @@ body {
   border-radius: 32px;
   corner-shape: var(--shape);
   justify-content: center;
+  
   align-items: center;
   box-shadow: var(--emboss-shadow);
   transition: all 0.8s ease;

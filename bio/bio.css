@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
+  transition: all 0.5s ease;
 }
 
 :root {
@@ -93,6 +94,16 @@ body {
   font-weight: 500;
   font-size: 24px;
   font-family: var(--myFont);
+  animation: redName 1s ease alternate infinite;
+}
+
+@keyframes redName {
+  0% {
+    color: var(--white);
+  }
+  100% {
+    color: var(--brand);
+  }
 }
 
 .verfied {
@@ -110,10 +121,11 @@ body {
 }
 
 .plus-icon {
-  width: 20px;
-  height: 20px;
-  color: var(--white-3);
+  width: 18px;
+  height: 18px;
+  color: var(--white-2);
   z-index: 2;
+  line-height: 0;
 }
 
 .plus-icon-1 {
@@ -140,6 +152,84 @@ body {
   right: -10px;
 }
 
+.plus-icon.animate-icon {
+  animation: move1 1s ease alternate;
+  transform-origin: center;
+}
+
+@keyframes move1 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.accordion {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.item {
+  gap: 20px;
+  transition: all 0.5s ease;
+  width: 100%;
+  justify-content: start;
+}
+
+.ques {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90%;
+  width: auto;
+  padding: 16px;
+  font-weight: 400;
+  border: none;
+  background: var(--black-2);
+  color: var(--white-2);
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 100%;
+  text-align: left;
+  transition: all 0.5 ease;
+  cursor: pointer;
+  place-self: end;
+}
+
+.answer-pare {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 0.5s ease;
+  max-width: 90%;
+  width: auto;
+  background:var(--white-2);
+
+ 
+}
+
+.ans{
+  overflow: hidden;
+  font-size: 14px;
+  color: var(--black-2);
+  line-height: 150%;
+}
+
+.answer {
+  padding: 16px;
+}
+
+
+.item.open .answer-pare {
+  grid-template-rows: 1fr;
+  margin-top: 10px;
+}
+
+
 @media (min-width: 768px) {
   .content {
     width: 100%;
@@ -154,7 +244,7 @@ body {
     border-right: var(--border);
   }
 
-  .about-card:nth-child(2){
-    width: 30%;
+  .about-card:nth-child(2) {
+    width: 32%;
   }
 }
